@@ -1,6 +1,14 @@
 # VuePiniaBasico
 
-This template should help get you started developing with Vue 3 in Vite.
+Usos:
+
+- Diferentes sintaxis de stores como: Options y Setup
+
+
+
+Créditos:
+
+Curso de Vue Intermedio https://udemy.com/course/vue-intermedio/learn/lecture/34483924
 
 ## Recommended IDE Setup
 
