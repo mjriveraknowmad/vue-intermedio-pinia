@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import ClientList from '@/clients/components/ClientList.vue';
+import useClients from '../composables/useClients';
+
+const { isLoading, clients, currentPage, totalPages, getPage } = useClients();
+
 </script>
 
 <template>
@@ -7,7 +11,7 @@ import ClientList from '@/clients/components/ClientList.vue';
         <h1>Listado de clientes</h1>
 
         <!-- Client List -->
-        <ClientList :clients="[]" />
+        <ClientList :clients="clients" />
 
         <!-- PaginationNumbers -->
 

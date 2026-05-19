@@ -26,7 +26,9 @@ npm install
 npm run backend-server
 ```
 
-4. Ejecutar la aplicación de Vue.js
+4. Renombrar .env.template por .env
+
+5. Ejecutar la aplicación de Vue.js
 ```
 npm run dev
 ```
