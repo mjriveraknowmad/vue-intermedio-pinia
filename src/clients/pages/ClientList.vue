@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ClientList from '@/clients/components/ClientList.vue';
+import PaginationNumbers from '../components/PaginationNumbers.vue';
 import useClients from '../composables/useClients';
 
 const { isLoading, clients, currentPage, totalPages, getPage } = useClients();
@@ -14,10 +15,17 @@ const { isLoading, clients, currentPage, totalPages, getPage } = useClients();
         <ClientList :clients="clients" />
 
         <!-- PaginationNumbers -->
+        <PaginationNumbers 
+            :current-page="currentPage"
+            :total-pages="totalPages"
+            @page-changed="getPage"
+        />
 
         <!-- LoadingModal -->
 
     </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

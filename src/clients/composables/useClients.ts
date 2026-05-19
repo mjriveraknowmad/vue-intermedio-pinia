@@ -7,9 +7,9 @@ import clientsApi from "@/api/clients-api";
 import type { Client, ClientsResponse } from "@/clients/interfaces/client";
 
 const getClients = async (page: number): Promise<ClientsResponse> => {
-  await new Promise((resolve) => {
-    setTimeout(() => resolve(true), 1500);
-  });
+//   await new Promise((resolve) => {
+//     setTimeout(() => resolve(true), 1500);
+//   });
 
   const { data } = await clientsApi.get<ClientsResponse>(`/clients?_page=${page}`);
   return data;
