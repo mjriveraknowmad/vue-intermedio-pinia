@@ -2,6 +2,7 @@
 import ClientList from '@/clients/components/ClientList.vue';
 import PaginationNumbers from '../components/PaginationNumbers.vue';
 import useClients from '../composables/useClients';
+import LoadingModal from '../../shared/components/LoadingModal.vue';
 
 const { isLoading, clients, currentPage, totalPages, getPage } = useClients();
 
@@ -22,6 +23,7 @@ const { isLoading, clients, currentPage, totalPages, getPage } = useClients();
         />
 
         <!-- LoadingModal -->
+        <LoadingModal v-if="isLoading"/>
 
     </div>
 </template>

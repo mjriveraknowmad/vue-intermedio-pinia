@@ -7,9 +7,9 @@ import clientsApi from "@/api/clients-api";
 import type { Client, ClientsResponse } from "@/clients/interfaces/client";
 
 const getClients = async (page: number): Promise<ClientsResponse> => {
-//   await new Promise((resolve) => {
-//     setTimeout(() => resolve(true), 1500);
-//   });
+  await new Promise((resolve) => {
+    setTimeout(() => resolve(true), 1000); // Simulamos un retraso de 1 segundo, para ver el efecto del isLoading
+  });
 
   const { data } = await clientsApi.get<ClientsResponse>(`/clients?_page=${page}`);
   return data;
